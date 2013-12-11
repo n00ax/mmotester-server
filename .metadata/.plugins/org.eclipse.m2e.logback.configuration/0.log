@@ -1,0 +1,3 @@
+2013-12-10 22:11:18,712 [Worker-1] INFO  org.eclipse.jetty.server.Server - jetty-8.1.3.v20120522
+2013-12-10 22:11:19,344 [Worker-1] INFO  o.e.jetty.server.AbstractConnector - Started SelectChannelConnector@127.0.0.1:57430
+2013-12-10 22:13:44,248 [main] INFO  o.e.j.server.handler.ContextHandler - stopped o.e.j.s.ServletContextHandler{/jrebel,null}
