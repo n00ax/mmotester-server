@@ -1,2 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<qualifiedTypeNameHistroy/>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="java.util.HashMap"/>
+<fullyQualifiedTypeName name="java.net.ServerSocket"/>
+<fullyQualifiedTypeName name="java.net.Socket"/>
+<fullyQualifiedTypeName name="mmotest.exception.ExceptionHandler"/>
+<fullyQualifiedTypeName name="mmotest.constants.Constants"/>
+<fullyQualifiedTypeName name="mmotest.io.PrintWriter"/>
+</qualifiedTypeNameHistroy>

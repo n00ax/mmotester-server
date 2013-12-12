@@ -1,5 +1,25 @@
 package mmotest.io;
 
 public class PrintWriter {
-
+	public static void println(String args){
+		System.out.println(args);
+	}
+	public static void println(int args){
+		System.out.println(args);
+	}
+	public static void println(float args){
+		System.out.println(args);
+	}
+	public static void println(double args){
+		System.out.println(args);
+	}
+	public static void println(long args){
+		System.out.println(args);
+	}
+	public static void println(short args){
+		System.out.println(args);
+	}
+	public static void println(Object args){
+		System.out.println(args);
+	}
 }

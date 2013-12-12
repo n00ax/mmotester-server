@@ -7,6 +7,8 @@ package mmotest.player;
  * @author noahwhiteis
  *
  */
-public class MasterPlayer {
-
+public class MasterPlayer extends Player{
+	MasterPlayer(){
+		super();
+	}
 }

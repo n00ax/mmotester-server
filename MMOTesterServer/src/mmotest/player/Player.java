@@ -8,5 +8,7 @@ package mmotest.player;
  *
  */
 public class Player {
-
+	public Player(){
+		
+	}
 }
