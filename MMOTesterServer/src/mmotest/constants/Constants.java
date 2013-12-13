@@ -10,4 +10,5 @@ public class Constants {
 	public static final short PORTNUM = 5000;
 	public static final int MAXPORT = 6000;
 	public static final int MINPORT = 6001;
+	public static final String LOGNAME = "log.mmm";
 }

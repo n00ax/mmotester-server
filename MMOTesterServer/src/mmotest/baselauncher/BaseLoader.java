@@ -1,11 +1,11 @@
 package mmotest.baselauncher;
 
 import mmotest.constants.Constants;
-import mmotest.io.PrintWriter;
+import mmotest.io.PrintOUT;
+
 
 public class BaseLoader {
 	public void InitBase(){
-		PrintWriter.println(Constants.PRODUCTSTSTR); // Load Product String
-		
+		PrintOUT.println(Constants.PRODUCTSTSTR); // Load Product String
 	}
 }

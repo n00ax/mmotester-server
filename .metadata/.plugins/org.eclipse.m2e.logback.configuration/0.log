@@ -86,3 +86,16 @@ org.apache.lucene.index.IndexNotFoundException: no segments* file found in org.a
 2013-12-12 07:14:56,771 [main] INFO  o.e.j.server.handler.ContextHandler - stopped o.e.j.s.ServletContextHandler{/jrebel,null}
 2013-12-12 07:29:29,324 [Worker-1] INFO  org.eclipse.jetty.server.Server - jetty-8.1.3.v20120522
 2013-12-12 07:29:29,960 [Worker-1] INFO  o.e.jetty.server.AbstractConnector - Started SelectChannelConnector@127.0.0.1:60467
+2013-12-12 16:37:31,746 [Worker-0] INFO  org.eclipse.jetty.server.Server - jetty-8.1.3.v20120522
+2013-12-12 16:37:32,690 [Worker-0] INFO  o.e.jetty.server.AbstractConnector - Started SelectChannelConnector@127.0.0.1:49387
+2013-12-12 18:30:52,963 [main] INFO  o.e.j.server.handler.ContextHandler - stopped o.e.j.s.ServletContextHandler{/jrebel,null}
+2013-12-12 18:55:15,416 [Worker-0] INFO  org.eclipse.jetty.server.Server - jetty-8.1.3.v20120522
+2013-12-12 18:55:16,461 [Worker-0] INFO  o.e.jetty.server.AbstractConnector - Started SelectChannelConnector@127.0.0.1:51253
+2013-12-12 19:03:54,920 [main] INFO  c.n.h.c.p.n.NettyAsyncHttpProvider - Number of application's worked threads is 4
+2013-12-12 19:03:57,556 [pool-7-thread-1] INFO  c.n.h.c.p.n.NettyAsyncHttpProvider - Number of application's worked threads is 4
+2013-12-12 19:03:58,158 [pool-9-thread-1] INFO  c.n.h.c.p.n.NettyAsyncHttpProvider - Number of application's worked threads is 4
+2013-12-12 19:03:58,755 [pool-11-thread-1] INFO  c.n.h.c.p.n.NettyAsyncHttpProvider - Number of application's worked threads is 4
+2013-12-12 20:14:46,575 [main] INFO  o.e.j.server.handler.ContextHandler - stopped o.e.j.s.ServletContextHandler{/jrebel,null}
+2013-12-12 20:57:08,369 [Worker-0] INFO  org.eclipse.jetty.server.Server - jetty-8.1.3.v20120522
+2013-12-12 20:57:08,750 [Worker-0] INFO  o.e.jetty.server.AbstractConnector - Started SelectChannelConnector@127.0.0.1:52127
+2013-12-12 21:12:43,235 [main] INFO  c.n.h.c.p.n.NettyAsyncHttpProvider - Number of application's worked threads is 4

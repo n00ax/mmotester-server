@@ -23,3 +23,15 @@
 2013-12-12 07:29:31.042 [JRebel License Expiration Notification Checker] DEBUG o.z.exec.ProcessExecutor - Started java.lang.UNIXProcess@f325905
 2013-12-12 07:29:34.490 [Worker-1] DEBUG o.z.exec.WaitForProcess - java.lang.UNIXProcess@4383cee3 stopped with exit code 2
 2013-12-12 07:29:34.511 [JRebel License Expiration Notification Checker] DEBUG o.z.exec.WaitForProcess - java.lang.UNIXProcess@f325905 stopped with exit code 2
+2013-12-12 16:37:32.697 [Worker-0] DEBUG HttpNotifications - Listening to JRebel notifications at http://127.0.0.1:49387/jrebel/notifications
+2013-12-12 16:37:33.487 [Worker-0] DEBUG o.z.exec.ProcessExecutor - Executing [/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/bin/java, -Drebel.log=false, -Drebel.log.stdout=false, -Drebel.properties=/Users/noahwhiteis/.jrebel/jrebel.properties, -Drebel.license_server.legacy=false, -cp, /Applications/eclipse 3/plugins/org.zeroturnaround.eclipse.embedder_5.4.1.SR1-201311061306/jrebel/jrebel.jar, com.zeroturnaround.javarebel.CLILicensingAPIImpl, getCurrentLicense, ]...
+2013-12-12 16:37:33.594 [Worker-0] DEBUG o.z.exec.ProcessExecutor - Started java.lang.UNIXProcess@19654104
+2013-12-12 16:37:41.907 [Worker-0] DEBUG o.z.exec.WaitForProcess - java.lang.UNIXProcess@19654104 stopped with exit code 2
+2013-12-12 18:55:16.463 [Worker-0] DEBUG HttpNotifications - Listening to JRebel notifications at http://127.0.0.1:51253/jrebel/notifications
+2013-12-12 18:55:17.240 [Worker-0] DEBUG o.z.exec.ProcessExecutor - Executing [/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/bin/java, -Drebel.log=false, -Drebel.log.stdout=false, -Drebel.properties=/Users/noahwhiteis/.jrebel/jrebel.properties, -Drebel.license_server.legacy=false, -cp, /Applications/eclipse 3/plugins/org.zeroturnaround.eclipse.embedder_5.4.1.SR1-201311061306/jrebel/jrebel.jar, com.zeroturnaround.javarebel.CLILicensingAPIImpl, getCurrentLicense, ]...
+2013-12-12 18:55:17.352 [Worker-0] DEBUG o.z.exec.ProcessExecutor - Started java.lang.UNIXProcess@56dfb22b
+2013-12-12 18:55:22.324 [Worker-0] DEBUG o.z.exec.WaitForProcess - java.lang.UNIXProcess@56dfb22b stopped with exit code 2
+2013-12-12 20:57:08.754 [Worker-0] DEBUG HttpNotifications - Listening to JRebel notifications at http://127.0.0.1:52127/jrebel/notifications
+2013-12-12 20:57:09.235 [Worker-0] DEBUG o.z.exec.ProcessExecutor - Executing [/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/bin/java, -Drebel.log=false, -Drebel.log.stdout=false, -Drebel.properties=/Users/noahwhiteis/.jrebel/jrebel.properties, -Drebel.license_server.legacy=false, -cp, /Applications/eclipse 3/plugins/org.zeroturnaround.eclipse.embedder_5.4.1.SR1-201311061306/jrebel/jrebel.jar, com.zeroturnaround.javarebel.CLILicensingAPIImpl, getCurrentLicense, ]...
+2013-12-12 20:57:09.306 [Worker-0] DEBUG o.z.exec.ProcessExecutor - Started java.lang.UNIXProcess@387dcf98
+2013-12-12 20:57:10.503 [Worker-0] DEBUG o.z.exec.WaitForProcess - java.lang.UNIXProcess@387dcf98 stopped with exit code 2

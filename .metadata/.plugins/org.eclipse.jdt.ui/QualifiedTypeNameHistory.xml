@@ -7,4 +7,8 @@
 <fullyQualifiedTypeName name="mmotest.exception.ExceptionHandler"/>
 <fullyQualifiedTypeName name="mmotest.constants.Constants"/>
 <fullyQualifiedTypeName name="mmotest.io.PrintWriter"/>
+<fullyQualifiedTypeName name="java.io.BufferedReader"/>
+<fullyQualifiedTypeName name="mmotest.io.PrintOUT"/>
+<fullyQualifiedTypeName name="java.io.InputStreamReader"/>
+<fullyQualifiedTypeName name="java.io.OutputStream"/>
 </qualifiedTypeNameHistroy>

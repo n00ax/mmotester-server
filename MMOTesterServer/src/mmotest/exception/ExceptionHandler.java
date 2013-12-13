@@ -7,4 +7,7 @@ public class ExceptionHandler {
 	public static void HandleNonFatal(Exception e){
 		
 	}
+	public void LogExtension(){
+		
+	}
 }
