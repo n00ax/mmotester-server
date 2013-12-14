@@ -9,5 +9,10 @@
     "location": "/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/classes.jar",
     "status": "RESOLVED",
     "error": "No call model found for \u0027/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/classes.jar\u0027. Neither fingerprint \u002717cb77e6b97b7d53eac15eb338d289d6ad70d64a\u0027 nor symbolic name \u0027jre\u0027 are known."
+  },
+  "/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/jce.jar": {
+    "coordinate": "jre:jre:zip:call:1.0.0",
+    "location": "/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/jce.jar",
+    "status": "RESOLVED"
   }
 }

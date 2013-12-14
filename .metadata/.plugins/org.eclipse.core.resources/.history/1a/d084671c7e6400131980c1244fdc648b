@@ -1,0 +1,8 @@
+package mmotest.protocol;
+
+import mmotest.protocol.Protocol.HeaderTypes;
+
+public class Packet {
+	public int Header;
+	public int Data[];
+}

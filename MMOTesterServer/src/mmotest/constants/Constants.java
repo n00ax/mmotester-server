@@ -11,4 +11,9 @@ public class Constants {
 	public static final int MAXPORT = 6000;
 	public static final int MINPORT = 6001;
 	public static final String LOGNAME = "log.mmm";
+	public static final String PACKET_ENC_TYPE = "RSA";
+	public static final String PACKET_ENC_PROVIDER= "SUN";
+	public static final String PACKET_RAN_TYPE = "SHA1PRNG";
+	public static final String PACKET_RAN_PROVIDER="SUN";
+	public static final int PACKET_KEY_SIZE = 1024;
 }

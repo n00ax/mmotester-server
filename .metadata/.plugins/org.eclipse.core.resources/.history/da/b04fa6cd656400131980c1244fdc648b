@@ -1,0 +1,33 @@
+package mmotest.thread;
+
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.Vector;
+
+public class PlayerThreadManager {
+	private boolean isRunning;
+	private Queue<Integer> WaitingRequest;
+	private int ThreadSize;
+	private ArrayList<Short> VectorPort;
+	private ArrayList<PlayerThread> plThreads;
+	public PlayerThreadManager(){
+		WaitingRequest = new LinkedList<Integer>();
+		VectorPort = new ArrayList<Short>();
+		plThreads = new ArrayList<PlayerThread>();
+	}
+	public void ListenThread(){
+		while(isRunning==true){
+			/*Handle Thread Request*/
+			WaitingRequest.add(ThreadSize);
+			VectorPort.clear();
+			/*END Handle Request*/
+			/*Give Thread To First In Queue(FIFO)*/
+			plThreads.add(new PlayerThread(WaitingRequest.poll()));
+			/*END GIVE Requestd
+		}
+	}
+	public void SpawnThread(int port){
+		
+	}
+}

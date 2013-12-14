@@ -1,0 +1,5 @@
+package mmotest.crypto;
+
+public class CryptManager {
+
+}
