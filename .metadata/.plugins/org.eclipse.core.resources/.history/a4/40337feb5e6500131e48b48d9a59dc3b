@@ -1,0 +1,17 @@
+package mmotest.player;
+
+public class Player {
+	private Double x_coord, y_coord, z_coord, x_delta , y_delta, z_delta;
+	private Integer model_id, player_id, alternate_movement_id, block_id, MapWidth;
+	private Boolean isAlive, isDead, isMoving, isWalking, isFlying, isSwimming, isOtherState;
+	private String Usrname, PasswdHash;
+	public Player(Double x, Double y, Double z, Double xdelta, Double ydelta, Double zdelta,
+			Integer modelid, Integer playerid, Integer alternate_movement, Integer block_id, Integer MapWidth,
+			Boolean is_Alive, Boolean is_Dead, Boolean is_Moving, Boolean is_Flying, Boolean is_Swimming, Boolean isOtherState,
+			String Username, String PasswordHash){
+		x_coord = x;
+		y_coord = y;
+		z_coord = z;
+		x
+	}
+}

@@ -1,0 +1,8 @@
+package mmotest.mem;
+
+public class GlobalMemory {
+	
+	public GlobalMemory(){
+		
+	}
+}

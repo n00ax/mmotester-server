@@ -1,0 +1,62 @@
+package mmotest.mem;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Hashtable;
+import java.util.Vector;
+import java.util.concurrent.atomic.AtomicInteger;
+
+import redis.clients.jedis.Jedis;
+
+public class SharedMemoryAccess {//DataBase Access
+	private static Vector<Vector<Double>> x_coords, y_coords, z_coords, x_delta, y_delta, z_delta,
+	player_privelege, model_number, curblock;// FAST CACHE
+	private static Vector<Vector<Integer>> blockdata;
+	private static Hashtable<String, String> usrList;
+	private static Hashtable<Integer, String> usrmap;
+	public static void InitMemory(){
+		x_coords = new Vector<Vector<Double>>();
+		y_coords = new Vector<Vector<Double>>(); 
+		z_coords = new Vector<Vector<Double>>(); 
+		x_delta = new Vector<Vector<Double>>();
+		y_delta = new Vector<Vector<Double>>();
+		z_delta = new Vector<Vector<Double>>();
+		player_privelege= new Vector<Vector<Double>>();
+		model_number = new Vector<Vector<Double>>();
+		curblock = new Vector<Vector<Double>>();
+	}
+	public static void LoadMemory(ArrayList<String> files){
+		
+	}
+	public void Process
+	public static synchronized Double getx(int worldid,int plid){
+		return x_coords.get(worldid).get(plid);
+	}
+	public static synchronized Double gety(int plid){
+		return y_coords.get(plid).get(plid);
+	}
+	public static synchronized Double getz(int plid){
+		return z_coords.get(plid).get(plid);
+	}
+	public static synchronized Double getx_delta(int plid){
+		return x_delta.get(plid).get(plid);
+	}
+	public static synchronized Double gety_delta(int plid){
+		return y_delta.get(plid).get(plid);
+	}
+	public static synchronized Double getz_delta(int plid){
+		return z_delta.get(plid).get(plid);
+	}
+	public static synchronized Double get_player_privlege(int plid){
+		return x_delta.get(plid);
+	}
+	public static synchronized Double get_player_model(int plid){
+		return y_delta.get(plid);
+	}
+	public static synchronized Double get_cur_block(int plid){
+		return z_delta.get(plid);
+	}
+	public static synchronized Integer gerplid(String usrname){
+		return 
+	}
+}

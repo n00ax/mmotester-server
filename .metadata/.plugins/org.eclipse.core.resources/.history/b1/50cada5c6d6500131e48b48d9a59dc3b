@@ -1,0 +1,5 @@
+package mmotest.timing;
+
+public class Clock {
+
+}

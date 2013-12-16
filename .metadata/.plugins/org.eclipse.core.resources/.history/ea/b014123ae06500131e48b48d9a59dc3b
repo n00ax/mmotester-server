@@ -1,0 +1,21 @@
+package mmotest.timing;
+
+import mmotest.player.Player;
+
+public class Clock {
+	double curTime;
+	double Dtime;
+	double lastTime;
+	double sleepTime=0;
+	public void StartTime(double synchronizedtime){
+		
+	}
+	public Coordinates UpdatePlayerPos(double x, double y, double z, double xdelta, double ydelta, double
+			zdelta, Player plr){
+		curTime = System.nanoTime(); //Delta Time Movememnt = this.x=+(speed*deltatime)
+		Dtime = curTime-lastTime;
+		x = 
+		lastTime = System.nanoTime();
+	}
+}
+/*Little Note On Speed

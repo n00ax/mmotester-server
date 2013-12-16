@@ -1,0 +1,27 @@
+/**
+ * 
+ */
+package mmotest.player;
+
+import java.util.ArrayList;
+
+import mmotest.world.Block;
+
+/**
+ * @author noahwhiteis
+ *
+ */
+//AO Denotes Away From Origin TO Denotes TO Origin
+public class Player {
+	private double x_coord, y_coord, z_coord, x_delta, y_delta, z_delta;
+	private int modelid, blockid, viewoffsetVert, ViewoffsetHor, viewoffsetTO, viewOffsetAO;
+	private ArrayList<Block> LoadMap;
+	public Player(int x, int y, int blockid){
+		LoadMap = new ArrayList<Block>();
+		
+	}
+	public void SetBlockLoaded(int blockid){
+		LoadMap.set(0,);
+		
+	}
+}

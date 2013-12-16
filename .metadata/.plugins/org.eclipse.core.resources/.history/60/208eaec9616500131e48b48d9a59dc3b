@@ -1,0 +1,37 @@
+package mmotest.player;
+
+import java.util.Vector;
+
+public class Player {
+	private double x_coord, y_coord, z_coord, x_delta , y_delta, z_delta;
+	private int model_id, player_id, alternate_movement_id, block_id, MapWidth;
+	private boolean isAlive, isDead, isMoving, isWalking, isFlying, isSwimming, isOtherState;
+	private String Usrname, PasswdHash;
+	private int Map_Width;
+	private Vector<Integer>BlocksToLoad;
+	public Player(double x, double y, double z, double xdelta, double ydelta, double zdelta,
+			int modelid, int playerid, int alternate_movement, int blockid, int MapWidth,
+			boolean is_Alive, boolean is_Dead, boolean is_Moving, boolean is_Flying, boolean is_Swimming, boolean is_OtherState,
+			String Username, String PasswordHash){
+		x_coord = x;
+		y_coord = y;
+		z_coord = z;
+		x_delta = xdelta;
+		y_delta = ydelta;
+		z_delta = zdelta;
+		model_id = modelid;
+		player_id = playerid;
+		alternate_movement_id = alternate_movement;
+		block_id = blockid;
+		Map_Width = MapWidth;
+		isAlive = is_Alive;
+		isDead = is_Dead;
+		isMoving = is_Moving;
+		isFlying = is_Flying;
+		isSwimming = is_Swimming;
+		isOtherState = is_OtherState;
+	}
+	public void ComputeVector(Vector<Integer> vectorstoload){
+		
+	}
+}

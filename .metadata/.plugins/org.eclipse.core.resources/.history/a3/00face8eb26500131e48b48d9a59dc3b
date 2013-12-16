@@ -1,0 +1,16 @@
+package mmotest.timing;
+
+public class Clock {
+	double curTime;
+	double Dtime;
+	double lastTime;
+	double sleepTime=0;
+	public void StartTime(double synchronizedtime){
+		
+	}
+	public void UpdatePlayerPos(double x, double y, double z, double xdelta, double ydelta, double
+			zdelta){
+		
+	}
+}
+/*Little Note On Speed
