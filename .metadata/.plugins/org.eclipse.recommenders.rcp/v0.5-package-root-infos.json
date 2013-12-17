@@ -98,9 +98,9 @@
       "micro": 0,
       "qualifier": ""
     },
-    "jarFileFingerprint": "8dd971cde724dfec556b5701ff3c9b8bbd262677",
-    "jarFileModificationDate": "2013-10-10T13:38:59-05:00",
-    "location": "/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/lib/ext/apple_provider.jar",
+    "jarFileFingerprint": "d1bab2162b3240f100212fea8ef4aa65df36689d",
+    "jarFileModificationDate": "2013-07-21T23:20:34-05:00",
+    "location": "/System/Library/Java/Extensions/QTJava.zip",
     "javaRuntime": true
   },
   {
@@ -111,9 +111,9 @@
       "micro": 0,
       "qualifier": ""
     },
-    "jarFileFingerprint": "d1bab2162b3240f100212fea8ef4aa65df36689d",
-    "jarFileModificationDate": "2013-07-21T23:20:34-05:00",
-    "location": "/System/Library/Java/Extensions/QTJava.zip",
+    "jarFileFingerprint": "8dd971cde724dfec556b5701ff3c9b8bbd262677",
+    "jarFileModificationDate": "2013-10-10T13:38:59-05:00",
+    "location": "/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/lib/ext/apple_provider.jar",
     "javaRuntime": true
   },
   {
@@ -137,9 +137,9 @@
       "micro": 0,
       "qualifier": ""
     },
-    "jarFileFingerprint": "70e3f9e76e3d5884415516c0cee0855295bcb571",
-    "jarFileModificationDate": "2013-10-10T13:22:21-05:00",
-    "location": "/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/jce.jar",
+    "jarFileFingerprint": "ea45c5d84b402679dd74825b0806a269a3cd4aee",
+    "jarFileModificationDate": "2013-10-10T13:32:12-05:00",
+    "location": "/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/charsets.jar",
     "javaRuntime": true
   },
   {
@@ -150,9 +150,9 @@
       "micro": 0,
       "qualifier": ""
     },
-    "jarFileFingerprint": "ea45c5d84b402679dd74825b0806a269a3cd4aee",
-    "jarFileModificationDate": "2013-10-10T13:32:12-05:00",
-    "location": "/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/charsets.jar",
+    "jarFileFingerprint": "70e3f9e76e3d5884415516c0cee0855295bcb571",
+    "jarFileModificationDate": "2013-10-10T13:22:21-05:00",
+    "location": "/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/jce.jar",
     "javaRuntime": true
   },
   {

@@ -118,3 +118,7 @@ org.apache.lucene.index.IndexNotFoundException: no segments* file found in org.a
 2013-12-15 19:54:51,823 [Worker-0] INFO  org.eclipse.jetty.server.Server - jetty-8.1.3.v20120522
 2013-12-15 19:54:52,331 [Worker-0] INFO  o.e.jetty.server.AbstractConnector - Started SelectChannelConnector@127.0.0.1:53333
 2013-12-15 19:57:13,306 [main] INFO  c.n.h.c.p.n.NettyAsyncHttpProvider - Number of application's worked threads is 4
+2013-12-15 21:56:39,481 [main] INFO  o.e.j.server.handler.ContextHandler - stopped o.e.j.s.ServletContextHandler{/jrebel,null}
+2013-12-16 07:11:02,258 [Worker-0] INFO  org.eclipse.jetty.server.Server - jetty-8.1.3.v20120522
+2013-12-16 07:11:02,633 [Worker-0] INFO  o.e.jetty.server.AbstractConnector - Started SelectChannelConnector@127.0.0.1:56272
+2013-12-16 07:12:35,054 [main] INFO  c.n.h.c.p.n.NettyAsyncHttpProvider - Number of application's worked threads is 4
