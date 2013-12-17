@@ -106,20 +106,12 @@ public class GlobalMemory {
 		}
 		return DMMVec;
 	}
-	public int GetSize(int Size){
-		
-	}
-	public Vector<Player> CrossReferencePlayer(Vector<Map<String, String>> worldinfo){
-		
-	}
 	public void UpdatePlayerFAST(FASTUpdate plobj){
 		DBCollection t_collect = StateDB.getCollection(plobj.toString());
 		DBObject finder = new BasicDBObject();
+		finder.
 	}
 	public void UpdatePlayerSLOW(Player plobj){
-		
-	}
-	public void ProcessHashMap_FO_SIZE(HashMap<Vector<Vector<Integer>>> smmlMAP, int a_vec){
 		
 	}
 }

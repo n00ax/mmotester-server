@@ -106,7 +106,7 @@ public class GlobalMemory {
 		}
 		return DMMVec;
 	}
-	public int GetSize(int Size){
+	public int G{
 		
 	}
 	public Vector<Player> CrossReferencePlayer(Vector<Map<String, String>> worldinfo){
@@ -117,9 +117,6 @@ public class GlobalMemory {
 		DBObject finder = new BasicDBObject();
 	}
 	public void UpdatePlayerSLOW(Player plobj){
-		
-	}
-	public void ProcessHashMap_FO_SIZE(HashMap<Vector<Vector<Integer>>> smmlMAP, int a_vec){
 		
 	}
 }

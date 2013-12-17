@@ -37,7 +37,4 @@ public class Constants {
 	public static final String blockField2 = "block2";
 	public static final String blockField3 = "block3";
 	public static final String blockField4 = "block4";
-	public static final String worldnames[] = {
-		"devtest"
-	};
 }
