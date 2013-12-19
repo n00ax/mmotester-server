@@ -1,0 +1,125 @@
+package mmotest.mem;
+
+import java.net.UnknownHostException;
+import java.util.Map;
+import java.util.Vector;
+
+import mmotest.constants.Constants;
+import mmotest.io.PrintOUT;
+import mmotest.player.CurrentPlayer;
+import mmotest.player.FASTUpdate;
+import mmotest.player.Player;
+import mmotest.thread.ThreadTerminator;
+
+import com.mongodb.BasicDBObject;
+import com.mongodb.DB;
+import com.mongodb.DBCursor;
+import com.mongodb.MongoClient;
+import com.mongodb.DBObject;
+import com.mongodb.DBCollection;
+public class GlobalMemory {
+	private MongoClient primary_client;
+	private DB UsrDB;
+	private DB StateDB;
+	private Vector<DB> WorldDB;
+	public GlobalMemory(){
+		try {
+			primary_client = new MongoClient(Constants.DBASE_IP,Constants.DBASE_PORT);
+			UsrDB = primary_client.getDB(Constants.UsrDBSName);
+			StateDB = primary_client.getDB(Constants.StateDBSName);
+			for(int i=0; i<=Constants.worldnames.length;i++){
+				WorldDB.add(primary_client.getDB(Constants.worldnames[i]));
+			}
+			boolean isAuthUsr = UsrDB.authenticate(Constants.UsrDBSName, Constants.UsrDBPasswd.toCharArray());
+			if(isAuthUsr==true){
+				PrintOUT.println("USER::DATABASE **SUCESSFUL** :: THREAD="+Thread.currentThread().getId());
+			}
+			else{
+				PrintOUT.println("USER::DATABASE **UNSUCESSFUL** :: THREAD="+Thread.currentThread().getId());
+				new ThreadTerminator("Server Build Or Immutable Memory Error, Could Not Login Into DB,USR");
+			}
+			boolean isAuthState = StateDB.authenticate(Constants.StateDBSName, Constants.StateDBPasswd.toCharArray());
+			if(isAuthState==true){
+				PrintOUT.println("USER::DATABASE **SUCESSFUL** :: THREAD="+Thread.currentThread().getId());
+			}
+			else{
+				PrintOUT.println("USER::DATABASE **UNSUCESSFUL** :: THREAD="+Thread.currentThread().getId());
+				new ThreadTerminator("Server Build Or Immutable Memory Error, Could Not Login Into DB,USR");
+			}
+			if(isAuthState==true){
+				PrintOUT.println("USER::DATABASE **SUCESSFUL** :: THREAD="+Thread.currentThread().getId());
+			}
+			else{
+				PrintOUT.println("USER::DATABASE **UNSUCESSFUL** :: THREAD="+Thread.currentThread().getId());
+				new ThreadTerminator("Server Build Or Immutable Memory Error, Could Not Login Into DB,USR");
+			}
+		} catch (UnknownHostException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	public CurrentPlayer GetInitPlayer(String UsrName, String Passwd, int Block1, int Block2,
+			int Block3, int Block4){
+		DBCollection usr_tp_collection = UsrDB.getCollection(Constants.UsrTable);
+		DBCursor usr_cursor = usr_tp_collection.find(new BasicDBObject("username","noah"));
+		DBObject usr_data = usr_cursor.next();
+		Map<String, String>usr_map = usr_data.toMap();
+		if(usr_map.get(Constants.UsernameField).equals(UsrName)==true && usr_map.get(Constants.PasswordField).
+				equals(Passwd)==true && usr_map.get(Constants.blockField1).equals(new Integer(Block1).toString())==true
+				&& usr_map.get(Constants.blockField2).equals(new Integer(Block2).toString())==true && 
+			usr_map.get(Constants.blockField3).equals(new Integer(Block3).toString())==true && usr_map.get(Constants.blockField1).
+			equals(new Integer(Block4).toString())==true){
+			PrintOUT.println("LOGIN ACCEPTED :: THREAD:"+Thread.currentThread().getId());
+			/*Now Lets Get Block Seperation Operation*/
+			Map<String, String> plmap = LoadRawVectorSTATE(usr_map.get("worldid"),"name",usr_map.get("name"));
+			//Now Get The Users Previous Data From StateDB
+		}
+		else{
+			PrintOUT.println("Database Verification OF Either Blocks Or Credentals Failed");
+			new ThreadTerminator("Invalid Login Or Bad Block");
+		}
+	}
+	public Map<String, String> LoadRawVectorUSR(String CollectionName, String FindObject, String FindKey){ //Gives Request Vector(**NOT EQUALIZED**)
+			DBCollection stl_collect = UsrDB.getCollection(CollectionName);
+			DBCursor stdm = stl_collect.find(new BasicDBObject(FindObject, FindKey));
+			DBObject state_data = stdm.next();
+			return state_data.toMap();
+	}
+	public Map<String, String> LoadRawVectorSTATE(String CollectionName, String FindObject, String FindKey){ //Gives Request Vector(**NOT EQUALIZED**)
+		DBCollection stl_collect = StateDB.getCollection(CollectionName);
+		DBCursor stdm = stl_collect.find(new BasicDBObject(FindObject, FindKey));
+		DBObject state_data = stdm.next();
+		return state_data.toMap();
+	}
+	public Map<String, String> LoadRawVectorBLOCK(int worldid,String CollectionName, String FindObject, String FindKey){ //Gives Request Vector(**NOT EQUALIZED**)
+		DBCollection stl_collect = WorldDB.get(worldid).getCollection(CollectionName);
+		DBCursor stdm = stl_collect.find(new BasicDBObject(FindObject, FindKey));
+		DBObject state_data = stdm.next();
+		return state_data.toMap();
+	}
+	public Vector<Map<String, String>> GetPlayersInBlock(int Worldnum, int BlockNum){ //Returns Vector Of Player Objects In Chunk
+		DBCollection stl_collect = WorldDB.get(Worldnum).getCollection(new Integer(BlockNum).toString());
+		DBCursor stdm = stl_collect.find(new BasicDBObject("isvisible", "true"));
+		Vector<Map<String, String>> DMMVec = new Vector<Map<String, String>>();
+		for(int i=0; i<=stdm.count();i++){
+			DMMVec.add(LoadRawVectorBLOCK(Worldnum, new Integer(BlockNum).toString(),"plid",new Integer(i).toString()));
+		}
+		return DMMVec;
+	}
+	public int GetSize(int Size){
+		
+	}
+	public Vector<Player> CrossReferencePlayer(Vector<Map<String, String>> worldinfo){
+		
+	}
+	public void UpdatePlayerFAST(FASTUpdate plobj){
+		DBCollection t_collect = StateDB.getCollection(plobj.toString());
+		DBObject finder = new BasicDBObject();
+	}
+	public void UpdatePlayerSLOW(Player plobj){
+		
+	}
+	public void ProcessHashMap_FO_SIZE(HashMap<Vector<Vector<Integer>>> smmlMAP, int a_vec){
+		
+	}
+}

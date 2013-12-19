@@ -1,0 +1,12 @@
+/**
+ * 
+ */
+package mmotest.protocol.execution;
+
+/**
+ * @author noahwhiteis
+ *
+ */
+public class F_Msg {
+
+}

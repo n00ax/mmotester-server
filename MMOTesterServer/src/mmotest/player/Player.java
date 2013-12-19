@@ -1,6 +1,11 @@
 package mmotest.player;
 
+import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.Map;
 import java.util.Vector;
+
+import com.mongodb.BasicDBObject;
 
 import mmotest.constants.Constants;
 import mmotest.timing.Clock;
@@ -67,5 +72,33 @@ public class Player {
 	public void ManualChangeCoords(Coordinates coord){ // Marked As Deprecated For Prevention Of Misuse
 		x_coord = coord.X;
 		y_coord = coord.Y;
+	}
+	public BasicDBObject GetIDAsOBJ(){
+		return new BasicDBObject("plid",new Integer(player_id).toString());
+	}
+	public BasicDBObject ToDBObj(){
+		BasicDBObject t_dl = new BasicDBObject();
+		/*User Coordinates*/
+		t_dl.append("username", Usrname);
+		t_dl.append("password", PasswdHash);
+		/*User Data*/
+		t_dl.append("x_coord", new Double(x_coord).toString());
+		t_dl.append("y_coord", new Double(y_coord).toString());
+		t_dl.append("z_coord", new Double(z_coord).toString());
+		t_dl.append("x_delta", new Double(x_delta).toString());
+		t_dl.append("y_delta", new Double(y_delta).toString()); 
+		t_dl.append("z_delta", new Double(z_delta).toString());
+		t_dl.append("model_id", new Integer(model_id).toString());
+		t_dl.append("player_id", new Integer(player_id).toString()); 
+		t_dl.append("alternate_movement_id", new Integer(alternate_movement_id).toString()); 
+		t_dl.append("block_id", new Integer(block_id).toString());
+		t_dl.append("Map_Width", new Integer(Map_Width).toString());
+		t_dl.append("isAlive", new Boolean(isAlive).toString()); 
+		t_dl.append("isDead", new Boolean(isDead).toString());
+		t_dl.append("isMoving", new Boolean(isMoving).toString());
+		t_dl.append("isFlying", new Boolean(isFlying).toString());
+		t_dl.append("isSwimming", new Boolean(isSwimming).toString()); 
+		t_dl.append("isOtherState", new Boolean(isOtherState).toString());
+		return t_dl;
 	}
 }

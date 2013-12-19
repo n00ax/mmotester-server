@@ -1,6 +1,8 @@
 package mmotest.mem;
-
+/*Noah Whiteis Copyright 2013*/
+/*PS FUCKIT I Will comment this src file later*/
 import java.net.UnknownHostException;
+import java.util.HashMap;
 import java.util.Map;
 import java.util.Vector;
 
@@ -22,6 +24,8 @@ public class GlobalMemory {
 	private DB UsrDB;
 	private DB StateDB;
 	private Vector<DB> WorldDB;
+	private HashMap<String, Integer>ID_Table;
+	private HashMap<Integer, Boolean>FufillmentTable;
 	public GlobalMemory(){
 		try {
 			primary_client = new MongoClient(Constants.DBASE_IP,Constants.DBASE_PORT);
@@ -71,12 +75,21 @@ public class GlobalMemory {
 			equals(new Integer(Block4).toString())==true){
 			PrintOUT.println("LOGIN ACCEPTED :: THREAD:"+Thread.currentThread().getId());
 			/*Now Lets Get Block Seperation Operation*/
-			
+			Map<String, String> plmap = LoadRawVectorSTATE(usr_map.get("worldid"),"name",usr_map.get("name"));
+			CurrentPlayer c_Plmap = new CurrentPlayer(Double.parseDouble(plmap.get("x_coord")), Double.parseDouble("y_coord"),
+					Double.parseDouble("z_coord"), Double.parseDouble("x_delta"), Double.parseDouble("y_delta"),
+					Double.parseDouble("z_delta"), Integer.parseInt("model_id"), Integer.parseInt("player_id"),
+					Integer.parseInt("alternate_movement_id"), Integer.parseInt("block_id"), Integer.parseInt("Map_Width"),
+					Boolean.parseBoolean("isAlive"), Boolean.parseBoolean("isDead"), Boolean.parseBoolean("isMoving"),
+					Boolean.parseBoolean("isFlying"), Boolean.parseBoolean("isSwimming"), Boolean.parseBoolean("isOtherState"),
+					usr_map.get("Usrname"), usr_map.get("PasswdHash"));
+			return c_Plmap;
 			//Now Get The Users Previous Data From StateDB
 		}
 		else{
 			PrintOUT.println("Database Verification OF Either Blocks Or Credentals Failed");
 			new ThreadTerminator("Invalid Login Or Bad Block");
+			return null;
 		}
 	}
 	public Map<String, String> LoadRawVectorUSR(String CollectionName, String FindObject, String FindKey){ //Gives Request Vector(**NOT EQUALIZED**)
@@ -109,6 +122,10 @@ public class GlobalMemory {
 	public int GetSize(int Size){
 		
 	}
+	private void FufillLedger(){
+		for(int i=0; i<FufillmentTable.size();i++)
+		FufillmentTable.get(ID_Table.get(key))
+	}
 	public Vector<Player> CrossReferencePlayer(Vector<Map<String, String>> worldinfo){
 		
 	}
@@ -116,8 +133,9 @@ public class GlobalMemory {
 		DBCollection t_collect = StateDB.getCollection(plobj.toString());
 		DBObject finder = new BasicDBObject();
 	}
-	public void UpdatePlayerSLOW(Player plobj){
-		
+	public void UpdatePlayerSLOW(Player plobj, int worldid){
+		DBCollection PLDM = WorldDB.get(worldid).getCollection(plobj.toString());
+		PLDM.update(plobj.GetIDAsOBJ(), plobj.ToDBObj());
 	}
 	public void ProcessHashMap_FO_SIZE(HashMap<Vector<Vector<Integer>>> smmlMAP, int a_vec){
 		

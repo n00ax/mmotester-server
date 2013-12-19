@@ -1,0 +1,5 @@
+package mmotest.protocol.execution;
+
+public class F_Dead {
+
+}
